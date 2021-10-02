@@ -19,21 +19,21 @@ async function whatsAsena () {
     conn.regenerateQRIntervalMs = 50000;
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('MIZUKI')}
+        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('DUMIBOT')}
 ${chalk.white.italic('Mizuki Code Recipient')}
 
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait. I am 👸 Mizuki')}`);
+${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait. I am 👸 Dumibot')}`);
     });
     
 
     conn.on('open', async () => {
         var st = Session.createStringSession(conn.base64EncodedAuthInfo());
         console.log(
-            chalk.green.bold('Your Mizuki String Code: '), Session.createStringSession(conn.base64EncodedAuthInfo())
+            chalk.green.bold('Your Dumibot String Code: '), Session.createStringSession(conn.base64EncodedAuthInfo())
         );
         
         if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `MIZUKI_SESSION="${st}"`);
+            fs.writeFileSync('config.env', `DUMIBOT_SESSION="${st}"`);
         }
         if (conn.user.jid.startsWith('90')) {
             await conn.sendMessage(conn.user.jid,st, MessageType.text)
