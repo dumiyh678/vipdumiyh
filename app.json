@@ -8,7 +8,7 @@
 	"success_url": "https://chat.whatsapp.com/HbURDOKU6Up29kmFXZUMEo",         
 	"stack": "container",
 	"env": {
-		"MIZUKI_SESSION": {
+		"DUMIBOT_SESSION": {
 			"description": "Qr කේතය scan කළ පසුව ලැබෙන කේතය.",
 			"required": true
 		},
