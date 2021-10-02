@@ -9,11 +9,11 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 
-DATABASE_URL = process.env.DATABASE_URL === undefined ? './Mizuki.db' : process.env.DATABASE_URL;
+DATABASE_URL = process.env.DATABASE_URL === undefined ? './Dumibot.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: '👸 Mizuki 1.0 beta version',
+    VERSION: '👸 Dumibot 1.0 beta version',
     CHANNEL: 'https://chat.whatsapp.com/HbURDOKU6Up29kmFXZUMEo',
     SESSION: process.env.MIZUKI_SESSION === undefined ? '' : process.env.DUMIBOT_SESSION,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
